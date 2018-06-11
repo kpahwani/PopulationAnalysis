@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    {% load static %}
+    <script src="{% static "js/graphs.js" %}" ></script>
+
+    <style>
+        div.container {
+            width: 100%;
+            border: 1px solid gray;
+        }
+
+        .graph {
+            width:50%;
+            height:400px;
+            padding-left: 160px;
+        }
+
+        .indent-1 {
+            width: 100%;
+            float: left;
+        }
+
+            .indent-1 section {
+                width: 50%;
+                height: 450px;
+                float: left;
+            }
+
+        header, footer {
+            padding: 1em;
+            color: white;
+            background-color: black;
+            clear: left;
+            text-align: center;
+        }
+    </style>
+</head>
+<body onload="loadCharts()">
+    <header>
+            <h1>Grahical Representation</h1>
+        </header>
+    <div class="container">
+        
+
+        <div class="row">
+            <div class="col-xs-6" style="background-color:lavender;">
+                <div class="graph" id="genderGraphContainer">
+                    Analysis on gender basis
+                </div>
+            </div>
+            <div class="col-xs-6" style="background-color:lavenderblush;">
+                <div class="graph" id="relationGraphContainer">
+                    Analysis on relation basis
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-11"></div>
+            <div class="col-xs-1">
+                <input type="button" class="btn btn-primary" value="Display" onclick="redirect()" style="margin-top:10px;margin-bottom:10px"/>
+            </div>
+        </div>
+    </div>
+    <footer>Copyright</footer>
+</body>
+</html>

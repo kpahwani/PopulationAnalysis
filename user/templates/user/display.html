@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    {% load static %}
+    <script src="{% static "js/display.js" %}" ></script>
+
+    <style>
+        div.container {
+            width: 100%;
+            border: 1px solid gray;
+        }
+
+        header, footer {
+            padding: 1em;
+            color: white;
+            background-color: black;
+            clear: left;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Data Representation</h1>
+    </header>
+    <div>
+        <div class="container">
+
+            <div class="row" style="margin-top: 10px">
+                <div class="col-xs-4"></div>
+                <div class="col-xs-2">
+                    <div class="col-xs-3">
+                        <label style="padding-top: 5px">Gender</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <select style="width:100px;margin-top:5px;margin-left:12px">
+                            <option value="volvo">All</option>
+                            <option value="saab">Male</option>
+                            <option value="opel">Female</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-2">
+                    <div class="col-xs-3">
+                        <label style="padding-top: 5px">Race</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <select style="width:100px;margin-top:5px;">
+                            <option value="volvo">All</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-2">
+                    <div class="col-xs-3">
+                        <label style="padding-top: 5px">Religion</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <select style="width:100px;margin-top:5px;margin-left:15px">
+                            <option value="volvo">All</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-1">
+                </div>
+                <div class="col-xs-1">
+                    <input type="button" class="btn btn-primary" value="Apply" />
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 10px; margin-bottom: 10px">
+                <div class="col-xs-12">
+                    <div style="width: 100%; height: 400px; background-color: lavenderblush;">
+                        <table id="displayTable" class="display" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Age</th>
+                                    <th>Work class</th>
+                                    <th>Final weight</th>
+                                    <th>Education</th>
+                                    <th>Edu. num.</th>
+                                    <th>Marital status</th>
+                                    <th>Occupation</th>
+                                    <th>Relationship</th>
+                                    <th>Race</th>
+                                    <th>Gender</th>
+                                    <th>Capital gain</th>
+                                    <th>Capital loss</th>
+                                    <th>hrs/week</th>
+                                    <th>Country</th>
+                                    <th>Class</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>Copyright</footer>
+</body>
+</html>
