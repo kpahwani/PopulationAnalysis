@@ -66,12 +66,12 @@ class Migration(migrations.Migration):
                 ('cap_loss', models.IntegerField(null=True)),
                 ('hrs_per_week', models.IntegerField(null=True)),
                 ('class_grp', models.CharField(choices=[('U', '>50'), ('L', '<=50')], max_length=10, null=True)),
-                ('country_id', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='users.Country')),
-                ('edu_id', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='users.Education')),
-                ('mar_status_id', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='users.MaritalStatus')),
-                ('occupation_id', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='users.Occupation')),
-                ('race_id', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='users.Race')),
-                ('relation_id', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='users.Relationship')),
+                ('country_id', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='user.Country')),
+                ('edu_id', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='user.Education')),
+                ('mar_status_id', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='user.MaritalStatus')),
+                ('occupation_id', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='user.Occupation')),
+                ('race_id', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='user.Race')),
+                ('relation_id', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='user.Relationship')),
             ],
         ),
         migrations.CreateModel(
@@ -84,6 +84,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='user',
             name='wrk_cls_id',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='users.WorkClass'),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='user.WorkClass'),
         ),
     ]
